@@ -1,0 +1,280 @@
+@import url(variables.css);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: white;
+}
+
+
+h2 {
+    color: var(--color05);
+    padding: 5px;
+}
+
+h4 {
+    color: var(--color02);
+    padding: 5px;
+}
+
+h5 {
+    color: var(--color02);
+    padding: 5px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.usuario {
+    align-items:end;
+}
+
+.usuario img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.filtros input {
+    border: 1px solid;
+    border-color: var(--color04);
+    border-radius: 5px;
+    padding: 8px;
+    padding-left: 30px;
+    background-image: url('../storage/img/lupa.png') ;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+    height: 50px;
+    font-family: var(--font);
+}
+
+.filtros button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color01);
+    align-items: center;
+}
+
+.filtros button img {
+    width: 50px;
+    height: 50px;
+}
+
+.categorias {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    padding-top: 25px;
+    
+}
+
+.categorias button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+    height: 50px;
+    font-family: var(--font);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    display: inline-flex;
+}
+
+.categorias button:active {
+    background-color: var(--color03);
+}
+
+.categorias button img {
+    width: 40px;
+    height: 40px;
+}
+
+.all {
+    background-color: var(--color01);
+    color: var(--color04);
+    padding-left: 5px;
+
+}
+
+.dress {
+    background-color: var(--color04);
+    color: var(--color05);
+    padding-left: 5px;
+}
+
+.tshirt {
+    background-color: var(--color04);
+    color: var(--color05);
+    padding-left: 5px;
+}
+
+.pants {
+    background-color: var(--color04);
+    color: var(--color05);
+    padding-left: 5px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 10px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.producto img:hover {
+    width: 104%;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.producto div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.favorito {
+    position:relative;
+    top: 8%;
+    left: 80%;
+    width: 30px;
+    height: 30px;
+    background-image: url('../storage/img/favOff.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.favorito:active {
+    background-image: url('../storage/img/favOn.png');
+}
+/*.favorito input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}*/
+/*.favLabel {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.fav:checked + .favLabel {
+    background-image: url('../storage/img/favOn.png');
+}*/
+.contenedorMenu {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 30%;
+    right: 30%;
+}
+
+nav {
+    padding: 20px;
+    width: 500px;
+}
+
+.menu {
+    background-color: var(--color01);
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;   
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu li {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li img {
+    width: 85px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+footer {
+    padding-top: 100px;
+}
+
+@media (min-width: 761px) {
+    .filtros input {
+        width: 350px;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media (min-width: 991px) {
+    
+    .filtros input {
+        width: 350px;
+    }
+
+    .categorias {
+        padding-top: 0px;
+    }
+
+    .contenedorFiltros {
+        display: flex;
+        
+        margin: 10px;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
