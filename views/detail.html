@@ -4,75 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
+    <link rel="icon" type="image/png" href="../storage/img/f.png">
     <link rel="stylesheet" href="../css/detail.css">
 </head>
 <body>
     <main>
         <button class="volver" onclick="window.history.back()"><img src="../storage/img/back.png"></button>
         <a class="tallasSitio" href="sizesTable.html"><img src="../storage/img/tallas.png"  alt="Tabla de tallas"></a>
-        <section class="detalle">
-            <article>
-                <div class="detalleImg">
-                    <img src="../storage/img/imagen2.png">
-                </div>
-            </article>
-            <article>
-                <h1>Light Dress Bless</h1>
-                <div class=tallas>
-                    <div class="detalleInfo">
-                        <div class="calificacion">
-                            <h4>&#11088; 5.0</h4>
-                        </div>
-                        <div class="calificacion">
-                            <p>(7.932 reviews)</p>
-                        </div>
-                    </div>
-                    <div class="cantidad">
-                        <button>-</button>
-                        <h3>1</h3>
-                        <button>+</button>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                    <p>Its simple and elegant shape makes it perfect for those of you who like you who want minimalist clothes</p><h3>Read More...</h3>
-                    </div>
-                    <div>
-                        <hr>
-                    </div>
-                    <div class="tallas2">
-                        <div>
-                            <h2>Choose Size</h2>
-                            <div class="tallasBotones">
-                                <button>S</button>
-                                <button>M</button>
-                                <button>L</button>
-                                <button>XL</button>
-                            </div>
-                        </div>
-                        <div>
-                            <h2>Color</h2>
-                            <div class="colorBotones">
-                                <button class="gris"></button>
-                                <button class="grisOscuro"></button>
-                                <button class="negro"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
+        <section class="detalle" id="detalleProducto">
+            
         </section>
         <div class="contenedorMenu">
             <nav>
                 <ul class="menu" href="./checkout.html">
-                    <li><a href="./checkout.html"><img src="../storage/img/cart.png">Add to Cart | $169.99 </a></li>
+                    <li><a id="agregarCarrito" href="./checkout.html"><img src="../storage/img/cart.png">Add to Cart</a></li>
                 </ul>
             </nav>
         </div>
         
         <footer>
+            <br><br><br><br>
             <h5>Autor: Kevin Chávez. 2026 Todos los derechos reservados.</h5>
         </footer>
     </main>
+    <script src="../js/detail.js"></script>
 </body>
 </html>
