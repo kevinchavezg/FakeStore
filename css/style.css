@@ -187,10 +187,12 @@ header div {
     background-repeat: no-repeat;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 0;
 }
 
 .favorito:active {
     background-image: url('../storage/img/favOn.png');
+    z-index: 0;
 }
 
 .contenedorMenu {
@@ -205,6 +207,7 @@ header div {
 nav {
     padding: 20px;
     width: 500px;
+    z-index: 100;
 }
 
 .menu {
@@ -214,7 +217,7 @@ nav {
     gap: 20px;   
     justify-content: center;
     align-items: center;
-    
+    z-index: 100;
 }
 
 .menu li {

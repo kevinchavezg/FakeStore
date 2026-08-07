@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FakeStore</title>
+    <link rel="icon" type="image/png" href="./storage/img/f.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -32,12 +33,12 @@
                     <input type="text" placeholder="Search clothes...">
                     <button><img src="storage/img/filter.png"></button>
             </section>
-            <section class="categorias">
-                <button class="all"><img src="storage/img/All.png">All Items</button>
-                <button class="womens"><img src="storage/img/dress.png">Womens</button>
-                <button class="mens"><img src="storage/img/pants.png">Mens</button>
-                <button class="jewelery"><img src="storage/img/shirt.png">Jewelery</button>
-                <button class="electronics"><img src="storage/img/shirt.png">Electronics</button>
+            <section class="categorias" id="contenedorCategorias">
+                <button class="all" data-category="all"><img src="storage/img/All.png">All Items</button>
+                <button class="womens" data-category="women's clothing"><img src="storage/img/women.png">Womens</button>
+                <button class="mens" data-category="men's clothing"><img src="storage/img/men.png">Mens</button>
+                <button class="jewelery" data-category="jewelery"><img src="storage/img/jewelery.png">Jewelery</button>
+                <button class="electronics" data-category="electronics"><img src="storage/img/electronic.png">Electronics</button>
 
             </section>
         </div>
