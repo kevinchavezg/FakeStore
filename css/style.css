@@ -202,12 +202,12 @@ header div {
     justify-content: center;
     left: 30%;
     right: 30%;
+    z-index: 100;
 }
 
 nav {
     padding: 20px;
     width: 500px;
-    z-index: 100;
 }
 
 .menu {
@@ -217,7 +217,6 @@ nav {
     gap: 20px;   
     justify-content: center;
     align-items: center;
-    z-index: 100;
 }
 
 .menu li {

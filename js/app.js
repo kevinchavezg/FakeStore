@@ -1,9 +1,12 @@
 let datos = [];
+let categoriaActual = "all";
+let textoBusqueda = "";
+
 const contenedor = document.getElementById("catalogo");
 const contenedorCategorias = document.getElementById("contenedorCategorias");
 
 function mostrarProductos(listaProductos) {
-    contenedor.innerHTML = ""; // Limpia el catálogo antes de renderizar
+    contenedor.innerHTML = ""; 
 
     if (listaProductos.length === 0) {
         contenedor.innerHTML = "<p>No se encontraron productos en esta categoría.</p>";
@@ -53,6 +56,29 @@ contenedorCategorias.addEventListener("click", (e) => {
         );
         mostrarProductos(productosFiltrados);
     }
+});
+
+function aplicarFiltros() {
+    const productosFiltrados = datos.filter(producto => {
+        const coincideCategoria = categoriaActual === "all" || producto.category === categoriaActual;
+        const coincideTexto = producto.title.toLowerCase().includes(textoBusqueda.toLowerCase());
+        return coincideCategoria && coincideTexto;
+    });
+
+    mostrarProductos(productosFiltrados);
+}
+
+contenedorCategorias.addEventListener("click", (e) => {
+    const boton = e.target.closest("button");
+    if (!boton) return;
+
+    categoriaActual = boton.dataset.category;
+    aplicarFiltros();
+});
+
+inputBusqueda.addEventListener("input", (e) => {
+    textoBusqueda = e.target.value.trim();
+    aplicarFiltros();
 });
 
 obtenerDatos();
