@@ -2,6 +2,7 @@ const contenedorDetalle = document.getElementById("detalleProducto");
 
 const urlParams = new URLSearchParams(window.location.search);
 const productoId = urlParams.get("id");
+let productoActual = null;
 
 async function cargarDetalle() {
     if (!productoId) {
@@ -10,26 +11,25 @@ async function cargarDetalle() {
     }
 
     try {
-        // La API de FakeStore permite pedir un solo producto por su ID
         const respuesta = await fetch(`https://fakestoreapi.com/products/${productoId}`);
-        const producto = await respuesta.json();
+        productoActual = await respuesta.json();
         contenedorDetalle.innerHTML = `
             <article>
                 <div class="detalleImg">
-                    <img src="${producto.image}">
+                    <img src="${productoActual.image}">
                 </div>
             </article>
             <article>
-                <h1>${producto.title}</h1>
-                <h5>${producto.category}</h5><br><br>
-                <h3>$${producto.price.toFixed(2)}</h3>
+                <h1>${productoActual.title}</h1>
+                <h5>${productoActual.category}</h5><br><br>
+                <h3>$${productoActual.price}</h3>
                 <div class=tallas>
                     <div class="detalleInfo">
                         <div class="calificacion">
-                            <h4>&#11088; ${producto.rating.rate}</h4>
+                            <h4>&#11088; ${productoActual.rating.rate}</h4>
                         </div>
                         <div class="calificacion">
-                            <p>(${producto.rating.count} reviews)</p>
+                            <p>(${productoActual.rating.count} reviews)</p>
                         </div>
                     </div>
                     <div class="cantidad">
@@ -40,7 +40,7 @@ async function cargarDetalle() {
                 </div>
                 <div>
                     <div>
-                    <p>${producto.description}
+                    <p>${productoActual.description}
                     </div>
                     <div>
                         <hr>
@@ -74,5 +74,18 @@ async function cargarDetalle() {
         `;
     }
 }
+
+function agregarAlCarrito(e) {
+    e.preventDefault();
+
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push(productoActual);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    alert("¡Producto añadido al carrito!");
+    window.location.href = e.currentTarget.href;
+}
+
+document.getElementById("agregarCarrito").addEventListener("click", agregarAlCarrito);
 
 cargarDetalle();

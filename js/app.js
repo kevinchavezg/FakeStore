@@ -21,7 +21,7 @@ function mostrarProductos(listaProductos) {
                 <h2>${product.title}</h2>
                 <h5>${product.category}</h5>
                 <div>
-                    <h2>$${product.price.toFixed(2)}</h2>
+                    <h2>$${product.price}</h2>
                     <p>&#11088; ${product.rating.rate}</p>
                 </div>
             </article>
