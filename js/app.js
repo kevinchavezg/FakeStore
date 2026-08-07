@@ -17,7 +17,7 @@ function mostrarProductos(listaProductos) {
         contenedor.innerHTML += `
             <article class="producto">
                 <div class="favorito"></div>
-                <a href="views/detail.html"><img src="${product.image}"></a>
+                <a href="views/detail.html?id=${product.id}"><img src="${product.image}"></a>
                 <h2>${product.title}</h2>
                 <h5>${product.category}</h5>
                 <div>
