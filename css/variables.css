@@ -1,0 +1,13 @@
+:root {
+    --color01: #292526;
+    --color02: #787676;
+    --color03: #A3A1A2;
+    --color04: #f2f2f2;
+    --color05: #121111;
+    --font: Encode;
+}
+
+@font-face {
+    font-family: Encode;
+    src: url(../storage/encode_sans/EncodeSans.ttf) format("truetype");
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeStore</title>
+    <link rel="icon" type="image/png" href="./storage/img/f.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedorMenu">
+            <nav>
+                <ul class="menu">
+                    <li><a href="#inicio"><img src="storage/img/inicio.png"></a></li>
+                    <li><a href="views/checkout.html"><img src="storage/img/checkout.png"></a></li>
+                    <li><a href="#inicio"><img src="storage/img/favMenu.png"></a></li>
+                    <li><a href="views/sizesTable.html"><img src="storage/img/tallas.png"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bienvenida" id="inicio">
+            <h4>Hello, Welcome Back &#128075;</h4>
+            <h2>Juan Carlos Mariño</h2>
+        </div>
+        <div class="usuario">
+            <img src="storage/img/login.png">
+        </div>
+    </header>
+    <main>
+        <div class="contenedorFiltros">
+            <section class="filtros">
+                    <input type="text" placeholder="Search clothes..." id="inputBusqueda">
+                    
+            </section>
+            <section class="categorias" id="contenedorCategorias">
+                <button class="all" data-category="all"><img src="storage/img/All.png">All Items</button>
+                <button class="womens" data-category="women's clothing"><img src="storage/img/women.png">Womens</button>
+                <button class="mens" data-category="men's clothing"><img src="storage/img/men.png">Mens</button>
+                <button class="jewelery" data-category="jewelery"><img src="storage/img/jewelery.png">Jewelery</button>
+                <button class="electronics" data-category="electronics"><img src="storage/img/electronic.png">Electronics</button>
+
+            </section>
+        </div>
+        <section class="catalogo" id="catalogo">
+            
+        </section>
+
+        <footer>
+            <h5>Autor: Kevin Chávez. 2026 Todos los derechos reservados.</h5>
+        </footer>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>

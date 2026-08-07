@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizes Table</title>
+    <link rel="stylesheet" href="../css/sizesTable.css">
+</head>
+<body>
+    <header>
+        <div><button class="volver" onclick="window.history.back()"><img src="../storage/img/back.png"></button></div>
+        <div><h2>Tabla de Tallas Interactiva</h2></div>
+    </header>
+    <main>
+        <section class="form">
+            <form>
+                <label>Tipo de prenda: </label>
+                <select name="seleccionar" required>
+                    <option value="" disabled>Seleccionar</option>
+                    <option value="xs">XS</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+            </form>
+        </section>
+        <section >
+            <table class="table" border="1">
+                <thead>
+                    <tr class="encabezados">
+                        <th>Talla</th>
+                        <th>Pecho</th>
+                        <th>Cintura</th>
+                        <th>Cadera</th>
+                    </tr>
+                </thead>
+                    <tr class="filas">
+                        <td class="valor">XS</td>
+                        <td>82-86 cm</td>
+                        <td>66-70 cm</td>
+                        <td>90-94 cm</td>
+                    </tr>
+                    <tr class="filas">
+                        <td class="valor">S</td>
+                        <td>86-90 cm</td>
+                        <td>70-74 cm</td>
+                        <td>94-98 cm</td>
+                    </tr>
+                    <tr class="filas">
+                        <td class="valor">M</td>
+                        <td>90-94 cm</td>
+                        <td>74-78 cm</td>
+                        <td>98-102 cm</td>
+                    </tr>
+                    <tr class="filas">
+                        <td class="valor">L</td>
+                        <td>94-98 cm</td>
+                        <td>78-82 cm</td>
+                        <td>102-106 cm</td>
+                    </tr>
+                    <tr class="filas">
+                        <td class="valor">XL</td>
+                        <td>98-102 cm</td>
+                        <td>82-86 cm</td>
+                        <td>106-110 cm</td>
+                    </tr>
+            </table>
+        </section>
+        <div class="contenedorMenu">
+            <nav>
+                <ul class="menu">
+                    <li><a href="../index.html"><img src="../storage/img/inicio.png"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <footer>
+        <h5>Autor: Kevin Chávez. 2026 Todos los derechos reservados.</h5>
+    </footer>
+</body>
+</html>
