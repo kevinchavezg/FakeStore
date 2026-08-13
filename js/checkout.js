@@ -19,7 +19,7 @@ function mostrarCarrito() {
                 <div class="itemInfo2">
                     <h4>${producto.title}</h4>
                     <p>${producto.category}</p>
-                    <h4>${producto.price}</h4>
+                    <h4>$${producto.price}</h4>
                 </div>
                 <div class="itemInfo">
                     <button>-</button>
@@ -31,6 +31,22 @@ function mostrarCarrito() {
         `;
     });
 
+}
+
+
+function comprar() {
+    const carrito = JSON.parse(localStorage.getItem("carrito"));
+    const historialCompra = JSON.parse(localStorage.getItem("historialCompra")) || [];
+    carrito.forEach((producto, index) => {
+        historialCompra.push(producto);
+    })
+    localStorage.setItem("historialCompra", JSON.stringify(historialCompra));
+    console.log(`${historialCompra}`);
+
+    alert("¡Gracias por su Compra!");
+
+    localStorage.setItem("carrito", JSON.stringify([]));
+    contenedorCarrito.innerHTML = "";
 }
 
 mostrarCarrito();
