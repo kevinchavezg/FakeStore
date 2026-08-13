@@ -37,6 +37,11 @@ let fecha = new Date();
 
 function comprar() {
     const carrito = JSON.parse(localStorage.getItem("carrito"));
+    if (carrito.length === 0) {
+        alert("¡El carrito no tiene productos!");
+        return;
+    }
+
     const historialCompra = JSON.parse(localStorage.getItem("historialCompra")) || [];
     
     carrito.forEach((producto, index) => {
