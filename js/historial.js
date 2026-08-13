@@ -14,7 +14,7 @@ function mostrarHistorial() {
         contenedorHistorial.innerHTML += `
             <article class="item">
                 <div class="itemInfo">
-                    <img src="${producto.image}" width="50">
+                    <img src="${producto.image}" width="70">
                 </div>
                 <div class="itemInfo2">
                     <h4>${producto.title}</h4>

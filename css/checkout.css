@@ -62,6 +62,12 @@ header div {
     gap: 20px;
 }
 
+.itemsHistorial {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+}
+
 .item {
     display: flex;
     flex-direction: row;
@@ -191,6 +197,19 @@ nav {
     text-align: center;
 }
 
+.menu li button {
+    padding: 50%;
+    background-color: var(--color01);
+    color: var(--color04);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: large;
+}
+
+.menu li button:hover {
+    font-size: larger;
+}
 
 .menu li img {
     width: 85px;
@@ -204,6 +223,23 @@ nav {
 
 footer {
     padding-top: 100px;
+}
+
+.Historial {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--color05);
+    text-decoration: none;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Historial:hover {
+    background-color: gold;
 }
 
 @media (min-width: 761px) {
